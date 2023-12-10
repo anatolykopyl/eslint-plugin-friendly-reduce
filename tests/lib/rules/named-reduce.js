@@ -4,7 +4,7 @@
  */
 "use strict";
 
-const rule = require("../../../lib/rules/named-reduce"),
+const rule = require("../../../lib/rules/wrap-reduce"),
   RuleTester = require("eslint").RuleTester;
 
 const config = {
@@ -20,7 +20,7 @@ const config = {
 }
 
 const ruleTester = new RuleTester(config);
-ruleTester.run("named-reduce", rule, {
+ruleTester.run("wrap-reduce", rule, {
   valid: [
     "function sum(nums) { return array.reduce(reducer) }",
     "const sum = (nums) => array.reduce(reducer)",

@@ -1,6 +1,7 @@
-# eslint-plugin-named-reduce
+# eslint-plugin-friendly-reduce
 
-Disallow `Array#reduce()` outside of a function specifically describing it
+Ensure best practices when dealing with `Array#reduce()`
+
 
 ## Installation
 
@@ -10,20 +11,20 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-named-reduce`:
+Next, install `eslint-plugin-friendly-reduce`:
 
 ```sh
-npm install eslint-plugin-named-reduce --save-dev
+npm install eslint-plugin-friendly-reduce --save-dev
 ```
 
 ## Usage
 
-Add `named-reduce` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `friendly-reduce` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "named-reduce"
+        "friendly-reduce"
     ]
 }
 ```
@@ -34,7 +35,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "named-reduce/rule-name": 2
+        "friendly-reduce/wrap-reduce": 2
     }
 }
 ```
@@ -43,10 +44,8 @@ Then configure the rules you want to use under the rules section.
 
 <!-- begin auto-generated rules list -->
 
-| Name                                       | Description                                                   |
-| :----------------------------------------- | :------------------------------------------------------------ |
-| [named-reduce](docs/rules/named-reduce.md) | Disallow `Array#reduce()` outside of a function explaining it |
+| Name                                     | Description                                                   |
+| :--------------------------------------- | :------------------------------------------------------------ |
+| [wrap-reduce](docs/rules/wrap-reduce.md) | Disallow `Array#reduce()` outside of a function explaining it |
 
 <!-- end auto-generated rules list -->
-
-

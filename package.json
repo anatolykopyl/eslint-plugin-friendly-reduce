@@ -1,13 +1,13 @@
 {
-  "name": "eslint-plugin-named-reduce",
+  "name": "eslint-plugin-friendly-reduce",
   "version": "0.0.0",
-  "description": "Disallow Array#reduce() outside of a function specifically for it",
+  "description": "Ensure best practices when dealing with Array#reduce()",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "Anatoly Kopyl",
+  "author": "Anatoly Kopyl <hi@kopyl.dev>",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
