@@ -1,7 +1,3 @@
-/**
- * @fileoverview Disallow Array#reduce() outside of a
- * @author Anatoly Kopyl
- */
 "use strict";
 
 const outdent = require('outdent')

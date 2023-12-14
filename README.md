@@ -44,8 +44,9 @@ Then configure the rules you want to use under the rules section.
 
 <!-- begin auto-generated rules list -->
 
-| Name                                     | Description                                                   |
-| :--------------------------------------- | :------------------------------------------------------------ |
-| [wrap-reduce](docs/rules/wrap-reduce.md) | Disallow `Array#reduce()` outside of a function explaining it |
+| Name                                                 | Description                                                   |
+| :--------------------------------------------------- | :------------------------------------------------------------ |
+| [no-useless-reduce](docs/rules/no-useless-reduce.md) | Disallow the usage of useless reduce                          |
+| [wrap-reduce](docs/rules/wrap-reduce.md)             | Disallow `Array#reduce()` outside of a function explaining it |
 
 <!-- end auto-generated rules list -->
