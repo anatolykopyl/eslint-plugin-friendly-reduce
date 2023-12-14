@@ -1,12 +1,13 @@
 {
   "name": "eslint-plugin-friendly-reduce",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Ensure best practices when dealing with Array#reduce()",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
+  "repository": "https://github.com/anatolykopyl/eslint-plugin-friendly-reduce",
   "author": "Anatoly Kopyl <hi@kopyl.dev>",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
@@ -21,9 +22,11 @@
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.19.0",
+    "@antfu/eslint-config": "^2.4.5",
+    "eslint": "^8.55.0",
     "eslint-doc-generator": "^1.0.0",
     "eslint-plugin-eslint-plugin": "^5.0.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-node": "^11.1.0",
     "mocha": "^10.0.0",
     "npm-run-all": "^4.1.5",

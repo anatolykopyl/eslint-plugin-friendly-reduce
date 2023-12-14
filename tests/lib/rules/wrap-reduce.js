@@ -1,9 +1,9 @@
-"use strict";
+'use strict'
 
 const outdent = require('outdent')
 
-const rule = require("../../../lib/rules/wrap-reduce"),
-  RuleTester = require("eslint").RuleTester;
+const RuleTester = require('eslint').RuleTester
+const rule = require('../../../lib/rules/wrap-reduce')
 
 const config = {
   env: {
@@ -17,8 +17,8 @@ const config = {
   },
 }
 
-const ruleTester = new RuleTester(config);
-ruleTester.run("wrap-reduce", rule, {
+const ruleTester = new RuleTester(config)
+ruleTester.run('wrap-reduce', rule, {
   valid: [
     outdent`
       function sum(nums) {
@@ -32,14 +32,14 @@ ruleTester.run("wrap-reduce", rule, {
       const sum = function(nums) { 
         return array.reduce(reducer)
       }`,
-    "const sum = (nums) => array.reduce(reducer)",
-    "const positive = array.filter(reducer)"
+    'const sum = (nums) => array.reduce(reducer)',
+    'const positive = array.filter(reducer)',
   ],
 
   invalid: [
     {
-      code: "const foo = array.reduce(reducer)",
-      errors: [{ message: "reduce call should be wrapped in its own function." }],
+      code: 'const foo = array.reduce(reducer)',
+      errors: [{ message: 'reduce call should be wrapped in its own function.' }],
     },
     {
       code: outdent`
@@ -47,7 +47,7 @@ ruleTester.run("wrap-reduce", rule, {
           const a = 2
           return array.reduce(reducer) 
         }`,
-      errors: [{ message: "reduce call should be wrapped in its own function." }],
+      errors: [{ message: 'reduce call should be wrapped in its own function.' }],
     },
     {
       code: outdent`
@@ -55,7 +55,7 @@ ruleTester.run("wrap-reduce", rule, {
           const result = array.reduce(reducer) 
           return result
         }`,
-      errors: [{ message: "reduce call should be wrapped in its own function." }],
+      errors: [{ message: 'reduce call should be wrapped in its own function.' }],
     },
   ],
-});
+})

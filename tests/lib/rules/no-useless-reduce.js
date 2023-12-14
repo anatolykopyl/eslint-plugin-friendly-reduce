@@ -1,9 +1,9 @@
-"use strict";
+'use strict'
 
 const outdent = require('outdent')
 
-const rule = require("../../../lib/rules/no-useless-reduce"),
-  RuleTester = require("eslint").RuleTester;
+const RuleTester = require('eslint').RuleTester
+const rule = require('../../../lib/rules/no-useless-reduce')
 
 const config = {
   env: {
@@ -17,8 +17,8 @@ const config = {
   },
 }
 
-const ruleTester = new RuleTester(config);
-ruleTester.run("no-useless-reduce", rule, {
+const ruleTester = new RuleTester(config)
+ruleTester.run('no-useless-reduce', rule, {
   valid: [
     outdent`
       nums.reduce((acc, curr) => {
@@ -38,7 +38,7 @@ ruleTester.run("no-useless-reduce", rule, {
         nums.reduce((acc, curr) => {
           return acc
         })`,
-      errors: [{ message: "If the reduce callback returns the same value it receives as the accumulator, then the reduce should be replaced with a for loop." }],
+      errors: [{ message: 'If the reduce callback returns the same value it receives as the accumulator, then the reduce should be replaced with a for loop.' }],
     },
   ],
-});
+})
