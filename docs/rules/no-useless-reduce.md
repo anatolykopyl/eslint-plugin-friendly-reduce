@@ -1,4 +1,4 @@
-# Disallow the usage of useless reduce (`friendly-reduce/no-useless-reduce`)
+# Disallow the usage of useless `Array#reduce()` (`friendly-reduce/no-useless-reduce`)
 
 <!-- end auto-generated rule header -->
 

@@ -30,12 +30,25 @@ ruleTester.run('no-useless-reduce', rule, {
         const sum = acc + curr
         return sum
       })`,
+    outdent`
+      nums.reduce((acc, curr) => {
+        if (acc > 5) return acc * 2
+        return acc
+      })`,
   ],
 
   invalid: [
     {
       code: outdent`
         nums.reduce((acc, curr) => {
+          return acc
+        })`,
+      errors: [{ message: 'If the reduce callback returns the same value it receives as the accumulator, then the reduce should be replaced with a for loop.' }],
+    },
+    {
+      code: outdent`
+        nums.reduce((acc, curr) => {
+          if (acc > 5) return acc
           return acc
         })`,
       errors: [{ message: 'If the reduce callback returns the same value it receives as the accumulator, then the reduce should be replaced with a for loop.' }],

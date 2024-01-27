@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-friendly-reduce",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ensure best practices when dealing with Array#reduce()",
   "keywords": [
     "eslint",
@@ -19,6 +19,7 @@
     "update:eslint-docs": "eslint-doc-generator"
   },
   "dependencies": {
+    "eslint-traverse": "^1.0.0",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
